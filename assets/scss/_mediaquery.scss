@@ -1,0 +1,20 @@
+@use "helpers/mixins" as *;
+
+@include mediaQuery(475px) {
+  .calculator {
+    width: 95%;
+    min-height: 78vh;
+
+    .top {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    
+    .keypad {
+      height: 54vh;
+      padding: 1.6em;
+      gap: 1em;
+    }
+  }
+}

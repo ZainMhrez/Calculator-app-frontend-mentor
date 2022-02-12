@@ -1,0 +1,70 @@
+.theme2 {
+  $main-bg: hsl(0, 0%, 90%);
+  $keypad-toggle-bg: hsl(0, 5%, 81%);
+  $screen-bg: hsl(0, 0%, 93%);
+
+  $key-bg: hsl(45, 7%, 89%);
+  $key-shadow: hsl(35, 11%, 61%);
+
+  $equal-toggle-bg: hsl(25, 98%, 40%);
+  $equal-shadow: hsl(25, 99%, 27%);
+
+  $del-reset-bg: hsl(185, 42%, 37%);
+  $del-reset-shadow: hsl(185, 58%, 25%);
+
+  $text-color: hsl(60, 10%, 19%);
+  
+  background-color: $main-bg;
+
+  .theme-toggler {
+    background-color: $keypad-toggle-bg;
+  }
+
+  h1, .theme-switcher > span, .theme-number {
+    color: $text-color;
+  }
+
+  .toggler2 {
+    background-color: $equal-toggle-bg;
+  }
+
+  .screen {
+    background-color: $screen-bg;
+    color: $text-color;
+  }
+
+  .keypad {
+    background-color: $keypad-toggle-bg;
+    color: $text-color;
+
+    .key {
+      background-color: $key-bg;
+      color: $text-color;
+      box-shadow: 0 3px $key-shadow;
+
+      &.equal {
+        background-color: $equal-toggle-bg;
+        color: white;
+        box-shadow: 0 3px $equal-shadow;
+      }
+      &.delete, &.reset {
+        background-color: $del-reset-bg;
+        color: white;
+        box-shadow: 0 3px $del-reset-shadow;
+      }
+    }
+  }
+
+  .attribution {
+    color: $del-reset-bg;
+
+    a {
+      color: $equal-toggle-bg;
+      &:hover {
+        color: $equal-shadow;
+      }
+    }
+  }
+
+}
+

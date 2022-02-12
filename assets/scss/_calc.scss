@@ -1,0 +1,119 @@
+@use "helpers/mixins" as *;
+
+
+.calculator {
+  width: 430px;
+  min-height: 72vh;
+  @include flexMixin(space-between, "");
+  flex-direction: column;
+
+  /* h1 and theme switcher */
+  .top {
+    @include flexMixin(space-between, flex-end);
+
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    .theme-switcher {
+      @include flexMixin(space-between, flex-end);
+
+      > span {
+        font-size: 0.8rem;
+        margin-right: 1.2em;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .switcher {
+        display: flex;
+        flex-direction: column;
+
+        .theme-number {
+          @include flexMixin(space-around, "");
+          font-size: 0.8rem;
+          margin-bottom: 0.2em;
+        }
+
+        .theme-toggler {
+          width: 52px;
+          height: 16px;
+          padding: 4px 3px;
+          border-radius: 10px;
+          @include flexMixin(space-between, center);
+
+          .toggler {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  /* Screen */
+  .screen {
+    width: 100%;
+    height: 12vh;
+    padding: 0.8em;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: end;
+  }
+
+  /* Keypad */
+  .keypad {
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1.3em;
+    padding: 1.3em;
+    border-radius: 6px;
+
+    .key {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border-radius: 6px;
+      padding-top: 6px;
+      overflow: hidden;
+      border: none;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.4s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .key.delete {
+      font-size: 1.3rem;
+    }
+    .key.reset {
+      grid-column: 1 / 3;
+      font-size: 1rem;
+    }
+    .key.equal {
+      grid-column: 3 / 5;
+      font-size: 1rem;
+    }
+  }
+}
+
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  letter-spacing: 0.8px;
+  
+  a { 
+    text-decoration: none;
+    transition: 0.5s;
+  }
+}

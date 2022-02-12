@@ -1,0 +1,69 @@
+.theme1 {
+  $main-bg: hsl(222, 26%, 31%);
+  $keypad-toggle-bg: hsl(223, 31%, 20%);
+  $screen-bg: hsl(224, 36%, 15%);
+
+  $key-bg: hsl(30, 25%, 89%);
+  $key-shadow: hsl(28, 16%, 65%);
+
+  $equal-toggle-bg: hsl(6, 63%, 50%);
+  $equal-shadow: hsl(6, 70%, 34%);
+
+  $del-reset-bg: hsl(225, 21%, 49%);
+  $del-reset-shadow: hsl(224, 28%, 35%);
+
+  $text-color: hsl(221, 14%, 31%);
+
+  background-color: $main-bg;
+
+  .theme-toggler {
+    background-color: $keypad-toggle-bg;
+  }
+
+  h1, .theme-switcher > span, .theme-number {
+    color: white;
+  }
+
+  .toggler1 {
+    background-color: $equal-toggle-bg;
+  }
+
+  .screen {
+    background-color: $screen-bg;
+    color: white;
+  }
+
+  .keypad {
+    background-color: $keypad-toggle-bg;
+    color: $text-color;
+
+    .key {
+      background-color: $key-bg;
+      color: $text-color;
+      box-shadow: 0 3px $key-shadow;
+
+      &.equal {
+        background-color: $equal-toggle-bg;
+        color: white;
+        box-shadow: 0 3px $equal-shadow;
+      }
+      &.delete, &.reset {
+        background-color: $del-reset-bg;
+        color: white;
+        box-shadow: 0 3px $del-reset-shadow;
+      }
+    }
+  }
+  
+  .attribution {
+    color: $key-bg;
+
+    a {
+      color: $equal-toggle-bg;
+      &:hover {
+        color: #d03f2fb3;
+      }
+    }
+  }
+}
+
